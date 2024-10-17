@@ -9,6 +9,28 @@ require('packer').startup(function(use)
         default_url_format = 'git@github.com:%s'
     }
 
+    -- Mason
+    use {
+      "williamboman/mason.nvim",
+      config = function()
+        require("mason").setup()  -- 确保 Mason 在启动时正确初始化
+      end
+    }
+    
+    use {
+      "williamboman/mason-lspconfig.nvim",
+      config = function()
+        require("mason-lspconfig").setup()
+      end
+    }
+    
+    use {
+      "neovim/nvim-lspconfig",
+      config = function()
+        require('plugins.lsp')  -- 这里加载你的 LSP 配置
+      end
+    }
+
   
     -- 自动补全
     use 'hrsh7th/nvim-cmp'                  -- 补全引擎
@@ -33,27 +55,6 @@ require('packer').startup(function(use)
     }
     use 'jistr/vim-nerdtree-tabs'
 
-    -- Mason
-    use {
-      "williamboman/mason.nvim",
-      config = function()
-        require("mason").setup()  -- 确保 Mason 在启动时正确初始化
-      end
-    }
-    
-    use {
-      "williamboman/mason-lspconfig.nvim",
-      config = function()
-        require("mason-lspconfig").setup()
-      end
-    }
-    
-    use {
-      "neovim/nvim-lspconfig",
-      config = function()
-        require('plugins.lsp')  -- 这里加载你的 LSP 配置
-      end
-    }
 
 end)
 
