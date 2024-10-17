@@ -56,5 +56,15 @@ require('packer').startup(function(use)
     use 'jistr/vim-nerdtree-tabs'
 
 
+    -- Copilot 插件
+    use {
+      "github/copilot.vim",
+      config = function()
+        vim.cmd([[imap <silent><script><expr> <C-J> copilot#Accept("\<CR>")]])  -- 设置 Copilot 补全快捷键
+      end
+    }
+
+
+
 end)
 
