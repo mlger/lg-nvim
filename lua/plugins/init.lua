@@ -39,6 +39,7 @@ require('packer').startup(function(use)
     use 'hrsh7th/cmp-path'                  -- 文件路径补全
     use 'hrsh7th/cmp-cmdline'               -- 命令行补全
     use 'L3MON4D3/LuaSnip'                  -- 代码片段
+    require('plugins.cmp')
 
     -- 语法高亮
     use 'nvim-treesitter/nvim-treesitter'   -- 语法高亮和代码解析器
