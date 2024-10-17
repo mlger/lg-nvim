@@ -2,7 +2,7 @@
 -- 加载 mason 和 mason-lspconfig
 require("mason").setup()
 require("mason-lspconfig").setup {
-    ensure_installed = { "clangd", "pyright", "sumneko_lua" }, -- 自动安装的语言服务器
+    ensure_installed = { "clangd", "pyright", "lua_ls" }, -- 自动安装的语言服务器
 }
 
 -- 语言服务器配置
