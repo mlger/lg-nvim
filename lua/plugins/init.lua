@@ -65,6 +65,8 @@ require('packer').startup(function(use)
       end
     }
 
+    -- 浮动终端
+    use 'voldikss/vim-floaterm'
 
 
 end)
