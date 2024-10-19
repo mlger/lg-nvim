@@ -35,16 +35,7 @@ vim.api.nvim_set_keymap('t', '<C-p>', '<C-\\><C-n>:FloatermPrev<CR>', { noremap 
 vim.api.nvim_set_keymap('t', '<C-n>', '<C-\\><C-n>:FloatermToggle<CR>', { noremap = true, silent = true })
 
 
--- 触发 LSP 格式化的函数
-local function format_on_demand()
-    local clients = vim.lsp.get_active_clients()
-    if next(clients) ~= nil then
-        vim.lsp.buf.format({ async = true })
-    else
-        print("No LSP clients attached")
-    end
-end
-
+-- 设置快捷键：Ctrl+Alt+L 进行格式化
 -- 在普通模式下绑定 Ctrl+Alt+L 来触发格式化
 vim.api.nvim_set_keymap('n', '<C-A-l>', '<cmd>lua vim.lsp.buf.format({ async = true })<CR>', { noremap = true, silent = true })
 -- 在插入模式下绑定 Ctrl+Alt+L 来触发格式化
@@ -53,8 +44,8 @@ vim.api.nvim_set_keymap('i', '<C-A-l>', '<cmd>lua vim.lsp.buf.format({ async = t
 
 -- Telescope 快捷键配置
 -- 全局搜索
-vim.api.nvim_set_keymap('n', '<leader>fg', '<cmd>Telescope live_grep<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<leader>ff', '<cmd>Telescope live_grep<CR>', { noremap = true, silent = true })
 -- 文件搜索
-vim.api.nvim_set_keymap('n', '<leader>ff', '<cmd>Telescope find_files<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<leader>fF', '<cmd>Telescope find_files<CR>', { noremap = true, silent = true })
 
 
