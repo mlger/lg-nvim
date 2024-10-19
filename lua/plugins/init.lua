@@ -54,7 +54,6 @@ require('packer').startup(function(use)
             require("plugins.nvimtree")
         end
     }
-    use 'jistr/vim-nerdtree-tabs'
 
 
     -- Copilot 插件
