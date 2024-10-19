@@ -49,3 +49,7 @@ vim.api.nvim_set_keymap('n', '<leader>ff', '<cmd>Telescope live_grep<CR>', { nor
 vim.api.nvim_set_keymap('n', '<leader>fF', '<cmd>Telescope find_files<CR>', { noremap = true, silent = true })
 
 
+
+
+-- 绑定 Leader + k 来显示浮动窗口
+vim.api.nvim_set_keymap('n', '<Leader>k', '<cmd>lua vim.lsp.buf.hover()<CR>', { noremap = true, silent = true })
