@@ -1,5 +1,7 @@
 local lspconfig = require("lspconfig")
 
+require('null-ls')
+
 -- 启用 clangd 作为 C/C++ 的 LSP
 require("mason").setup()
 require("mason-lspconfig").setup {
