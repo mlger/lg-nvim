@@ -49,3 +49,12 @@ end
 vim.api.nvim_set_keymap('n', '<C-A-l>', '<cmd>lua vim.lsp.buf.format({ async = true })<CR>', { noremap = true, silent = true })
 -- 在插入模式下绑定 Ctrl+Alt+L 来触发格式化
 vim.api.nvim_set_keymap('i', '<C-A-l>', '<cmd>lua vim.lsp.buf.format({ async = true })<CR>', { noremap = true, silent = true })
+
+
+-- Telescope 快捷键配置
+-- 全局搜索
+vim.api.nvim_set_keymap('n', '<leader>fg', '<cmd>Telescope live_grep<CR>', { noremap = true, silent = true })
+-- 文件搜索
+vim.api.nvim_set_keymap('n', '<leader>ff', '<cmd>Telescope find_files<CR>', { noremap = true, silent = true })
+
+
