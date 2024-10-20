@@ -90,5 +90,22 @@ require('packer').startup(function(use)
       end
     }
 
+    -- 括号匹配
+    use {
+      'windwp/nvim-autopairs',
+      config = function()
+        require('plugins.auto-pairs')
+      end
+    }
+
+    -- 注释
+    use {
+      'numToStr/Comment.nvim',
+      config = function()
+        require('plugins.comment')
+      end
+    }
+
+
 end)
 

@@ -3,6 +3,12 @@ require("nvim-tree").setup({
   -- 是否显示 git 状态
   git = {
     enable = true,
-  }
+    ignore = false,
+  },
+  actions = {
+    open_file = {
+--      quit_on_open = true,  -- 在打开文件后关闭 NvimTree
+    },
+  },
 })
 
