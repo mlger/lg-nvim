@@ -60,6 +60,10 @@ vim.api.nvim_set_keymap('n', '<C-_>', ':lua require("Comment.api").toggle.linewi
 -- 注释当前行 (插入模式)
 vim.api.nvim_set_keymap('i', '<C-_>', '<ESC>:lua require("Comment.api").toggle.linewise.current()<CR>i', { noremap = true, silent = true })
 -- 注释选中行 (可视模式)
-vim.api.nvim_set_keymap('v', '<C-_>', [[:<C-u>lua require('Comment.api').toggle.linewise(vim.fn.visualmode())<CR><Esc>gv]], { noremap = true, silent = true })
+vim.api.nvim_set_keymap('v', '<C-_>', [[:<C-u>lua require('Comment.api').toggle.linewise(vim.fn.visualmode())<CR>]], { noremap = true, silent = true })
 -- 块注释选中行 (可视模式)
 map('x', '<leader>b', '<ESC><cmd>lua require("Comment.api").toggle.blockwise(vim.fn.visualmode())<CR>', opts)
+
+-- 浮动错误提示
+vim.api.nvim_set_keymap('n', '<leader>e', '<cmd>lua vim.diagnostic.open_float(nil, {focus=false})<CR>', { noremap=true, silent=true })
+
