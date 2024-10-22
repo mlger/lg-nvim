@@ -5,6 +5,11 @@ require('packer').startup(function(use)
     -- Packer 自我管理
     use 'wbthomason/packer.nvim'
 
+    -- Themes
+    use 'folke/tokyonight.nvim'
+    use 'projekt0n/github-nvim-theme'
+
+
     git = {
         default_url_format = 'git@github.com:%s'
     }
@@ -105,6 +110,25 @@ require('packer').startup(function(use)
         require('plugins.comment')
       end
     }
+
+    -- 搜索
+    use {
+      "kevinhwang91/nvim-hlslens",
+      config = function()
+        require("scrollbar.handlers.search").setup({
+        })
+      end,
+    }
+    -- 滚动条
+    use {
+      'petertriho/nvim-scrollbar',
+      config = function()
+        require('hlslens')
+        require('gitsigns')
+        require('plugins.scrollbar')
+      end
+    }
+
 
 
 end)

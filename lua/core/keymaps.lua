@@ -44,9 +44,9 @@ vim.api.nvim_set_keymap('i', '<C-A-l>', '<cmd>lua vim.lsp.buf.format({ async = t
 
 -- Telescope 快捷键配置
 -- 全局搜索
-vim.api.nvim_set_keymap('n', '<leader>ff', '<cmd>Telescope live_grep<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<leader>f', '<cmd>Telescope live_grep<CR>', { noremap = true, silent = true })
 -- 文件搜索
-vim.api.nvim_set_keymap('n', '<leader>fF', '<cmd>Telescope find_files<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<leader>F', '<cmd>Telescope find_files<CR>', { noremap = true, silent = true })
 
 
 
@@ -67,3 +67,4 @@ map('x', '<leader>b', '<ESC><cmd>lua require("Comment.api").toggle.blockwise(vim
 -- 浮动错误提示
 vim.api.nvim_set_keymap('n', '<leader>e', '<cmd>lua vim.diagnostic.open_float(nil, {focus=false})<CR>', { noremap=true, silent=true })
 
+vim.api.nvim_set_keymap('n', '<leader>ns', ':nohlsearch<CR>', { noremap = true, silent = true })
