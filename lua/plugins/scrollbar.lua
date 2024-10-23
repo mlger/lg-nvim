@@ -2,6 +2,7 @@ require("scrollbar").setup({
     handlers = {
       gitsigns = true,
       search = true,
+      hlslens = true,
     },
     handle = {
         color = "#3b4261",  -- 对应 tokyonight.colors().bg_highlight

@@ -12,5 +12,5 @@ vim.opt.tabstop = 2        -- 一个 Tab 等于 2 个空格
 vim.opt.shiftwidth = 2     -- 缩进级别为 2 个空格
 vim.opt.expandtab = true   -- 用空格代替 Tab
 
--- Theme
+-- 设置主题
 vim.cmd('colorscheme github_dark')
