@@ -9,6 +9,7 @@ lspconfig.clangd.setup {
   end,
   flags = {
     debounce_text_changes = 150,
-  }
+  }, 
+  cmd = { "clangd", "--completion-style=detailed", "--header-insertion=never" }  -- 禁用头文件插入
 }
 
