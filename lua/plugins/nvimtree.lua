@@ -4,6 +4,9 @@ require("nvim-tree").setup({
   git = {
     enable = true,
     ignore = false,
+  }, diagnostics = {
+    enable = true,
+    show_on_dirs = true,
   },
   actions = {
     open_file = {
