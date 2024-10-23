@@ -67,4 +67,12 @@ map('x', '<leader>b', '<ESC><cmd>lua require("Comment.api").toggle.blockwise(vim
 -- 浮动错误提示
 vim.api.nvim_set_keymap('n', '<leader>e', '<cmd>lua vim.diagnostic.open_float(nil, {focus=false})<CR>', { noremap=true, silent=true })
 
+-- 取消搜索高亮
 vim.api.nvim_set_keymap('n', '<leader>ns', ':nohlsearch<CR>', { noremap = true, silent = true })
+
+-- 光标快速跳转
+-- Ctrl+j 跳转向下10行
+vim.api.nvim_set_keymap('n', '<C-j>', '10j', { noremap = true, silent = true })
+-- Ctrl+k 跳转向上10行
+vim.api.nvim_set_keymap('n', '<C-k>', '10k', { noremap = true, silent = true })
+
