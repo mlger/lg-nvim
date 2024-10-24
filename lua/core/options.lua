@@ -27,3 +27,11 @@ vim.cmd('highlight FloatermNC guibg=red guifg=green')
 -- 设置 NvimTree 的背景和前景色，使用 Normal 的颜色
 vim.api.nvim_set_hl(0, "NvimTreeNormal", { bg = "#30363d", fg = "none" })
 
+-- 禁用换行自动注释
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "*",
+  callback = function()
+    vim.opt_local.formatoptions:remove({ "c", "r", "o" })
+  end,
+})
+
