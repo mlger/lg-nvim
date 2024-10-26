@@ -73,6 +73,9 @@ vim.api.nvim_set_keymap('n', '<leader>ns', ':nohlsearch<CR>', { noremap = true, 
 -- 光标快速跳转
 -- Ctrl+j 跳转向下10行
 vim.api.nvim_set_keymap('n', '<C-j>', '10j', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('v', '<C-j>', '10j', { noremap = true, silent = true })
 -- Ctrl+k 跳转向上10行
 vim.api.nvim_set_keymap('n', '<C-k>', '10k', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('v', '<C-k>', '10k', { noremap = true, silent = true })
+
 
