@@ -77,5 +77,11 @@ vim.api.nvim_set_keymap('v', '<C-j>', '10j', { noremap = true, silent = true })
 -- Ctrl+k 跳转向上10行
 vim.api.nvim_set_keymap('n', '<C-k>', '10k', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('v', '<C-k>', '10k', { noremap = true, silent = true })
+-- Ctrl+h 跳转向左10列
+vim.api.nvim_set_keymap('n', '<C-h>', '10h', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('v', '<C-h>', '10h', { noremap = true, silent = true })
+-- Ctrl+l 跳转向右10列
+vim.api.nvim_set_keymap('n', '<C-l>', '10l', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('v', '<C-l>', '10l', { noremap = true, silent = true })
 
 
