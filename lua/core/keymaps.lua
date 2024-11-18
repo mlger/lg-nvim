@@ -8,7 +8,7 @@ vim.g.mapleader = ";"
 -- 文件树快捷键配置
 map('n', '<leader>t', ':NvimTreeToggle<CR>', opts)
 
-
+-- 清除F1键, 保留为snipaste
 vim.api.nvim_set_keymap('n', '<F1>', '<Nop>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('i', '<F1>', '<Nop>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('v', '<F1>', '<Nop>', { noremap = true, silent = true })
@@ -85,3 +85,6 @@ vim.api.nvim_set_keymap('n', '<C-l>', '10l', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('v', '<C-l>', '10l', { noremap = true, silent = true })
 
 
+-- 切换虚拟环境
+vim.keymap.set("n", "<leader>vs", ":VenvSelect<CR>", { desc = "选择虚拟环境" })
+vim.keymap.set("n", "<leader>vc", ":VenvSelectCached<CR>", { desc = "使用缓存的虚拟环境" })

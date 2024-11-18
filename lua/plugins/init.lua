@@ -129,7 +129,13 @@ require('packer').startup(function(use)
       end
     }
 
-
+    use {
+      'linux-cultist/venv-selector.nvim',
+      branch = 'regexp',
+      config = function()
+        require('plugins.venv_selector')
+      end
+    }
 
 end)
 

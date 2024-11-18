@@ -4,6 +4,10 @@ vim.opt.termguicolors = true        -- 启用终端真彩色
 vim.cmd('syntax on')                -- 启用语法高亮
 vim.opt.termguicolors = false
 
+-- 全小写则忽略, 否则区分大小写
+vim.opt.smartcase = true            -- 智能大小写
+vim.opt.ignorecase = true           -- 忽略大小写
+
 vim.opt.clipboard = 'unnamedplus'   -- 系统剪切板
 
 
