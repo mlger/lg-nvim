@@ -83,6 +83,12 @@ vim.api.nvim_set_keymap('v', '<C-h>', '10h', { noremap = true, silent = true })
 -- Ctrl+l 跳转向右10列
 vim.api.nvim_set_keymap('n', '<C-l>', '10l', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('v', '<C-l>', '10l', { noremap = true, silent = true })
+-- Ctrl+e 移动行末
+vim.api.nvim_set_keymap('n', '<C-e>', '$', { noremap = true, silent = true })
+-- Alt+j 跳转向下5行
+vim.api.nvim_set_keymap('n', '<A-j>', '5j', { noremap = true, silent = true })
+-- Alt+k 跳转向上5行
+vim.api.nvim_set_keymap('n', '<A-k>', '5k', { noremap = true, silent = true })
 
 
 -- 切换虚拟环境
